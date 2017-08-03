@@ -1,0 +1,14 @@
+// Define an extra-small breakpoint
+$screen-xxs:             0px;
+$screen-xxs-min:         $screen-xxs;
+$screen-xss-max:         ($screen-xs-min - 1);
+
+// Define an extra-large breakpoint
+$screen-xl:             1600px;
+$screen-xl-min:         $screen-xl;
+$screen-lg-max:         ($screen-xl-min - 1);
+
+// Define an iMac-and-upwards breakpoint - anything larger than HD
+$screen-xxl:             1921px;
+$screen-xxl-min:         $screen-xxl;
+$screen-xl-max:          ($screen-xxl-min - 1);

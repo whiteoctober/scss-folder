@@ -1,0 +1,38 @@
+// Set correct path to Bootstrap's Glyphicon fonts
+//$icon-font-path: "../third-party/bootstrap/fonts/bootstrap/";
+
+// Import Bootstrap (uncompiled Sass so we can access its mixins and variables)
+// IMPORTANT: Please open /www/third-party/bootstrap/stylesheets/_bootstrap.scss
+// and comment out anything the site doesn't use!!!
+//@import "../third-party/bootstrap/stylesheets/bootstrap";
+
+// Import any other third-party libraries here, e.g.:
+//@import "../third-party/slick/slick.scss";
+
+// Our custom styles and components
+@import "base/variables";
+@import "base/mixins";
+@import "base/palette";
+@import "base/typography";
+//@import "components/brand";
+//@import "components/nav";
+//@import "components/footer"; // ...and so on...
+
+// General styles
+body {
+    // Make sure page will be no thinner than mobile portrait
+    // Changed from 320 to 300 to stop horizontal scrollbars appearing on
+    // browsers whose scrollbars overlay the body content (e.g. IE11)
+    // rather than have scrollbars outside the body content (e.g. IE9)
+    min-width: 300px;
+    @media only screen and (max-width: 319px) {
+        // Ensure horizontal scrolling on devices thinner than 320px
+        overflow-x: auto;
+    }
+}
+
+// z-index tracking (note down classes that change the z-index):
+// 1:
+// 2:
+// 3:
+// 4: ...and so on...
