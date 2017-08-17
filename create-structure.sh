@@ -78,7 +78,32 @@ content_typography+="// https://github.com/whiteoctober/whiteoctober-site-2016/b
 echo "$content_typography" > scss/base/_typography.scss
 
 # base/_variables.scss
-content_variables="// Define an extra-small breakpoint\n"
+content_variables="// Bootstrap's breakpoints\n"
+content_variables+="// You can remove the xs, sm, md, and lg definitions from this file if your\n"
+content_variables+="// project actually uses Bootstrap\n\n"
+
+content_variables+="// Extra small screen / phone\n"
+content_variables+="\$screen-xs:                  480px !default;\n"
+content_variables+="\$screen-xs-min:              \$screen-xs !default;\n\n"
+
+content_variables+="// Small screen / tablet\n"
+content_variables+="\$screen-sm:                  768px !default;\n"
+content_variables+="\$screen-sm-min:              \$screen-sm !default;\n\n"
+
+content_variables+="// Medium screen / desktop\n"
+content_variables+="\$screen-md:                  992px !default;\n"
+content_variables+="\$screen-md-min:              \$screen-md !default;\n\n"
+
+content_variables+="// Large screen / wide desktop\n"
+content_variables+="\$screen-lg:                  1200px !default;\n"
+content_variables+="\$screen-lg-min:              \$screen-lg !default;\n\n"
+
+content_variables+="// So media queries don't overlap when required, provide a maximum\n"
+content_variables+="\$screen-xs-max:              (\$screen-sm-min - 1) !default;\n"
+content_variables+="\$screen-sm-max:              (\$screen-md-min - 1) !default;\n"
+content_variables+="\$screen-md-max:              (\$screen-lg-min - 1) !default;\n\n"
+
+content_variables+="// Define an extra-small breakpoint\n"
 content_variables+="\$screen-xxs:             0px;\n"
 content_variables+="\$screen-xxs-min:         \$screen-xxs;\n"
 content_variables+="\$screen-xss-max:         (\$screen-xs-min - 1);\n\n"
